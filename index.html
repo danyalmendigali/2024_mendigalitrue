@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEDuhi Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/100.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>VEDuhi Shop</span>
+        </div>
+        <div id="about">
+            <a href="#" title="Возможности" onclimage.pngick="slowScrll('#main')">About Store</a>
+            <a href="#" onclick="slowScrll('#overview')" title="Преимущества">Choice</a>
+            <a href="#" onclick="slowScrll('#contacts')" title="Контакты">Contacts</a>
+            <a href="#" onclick="slowScrll('#victories')" title="Победы">About our company</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Perfume</h1>
+        <h3>for a good smell</h3>
+    </div>
+
+    <div id="main">
+        <div class="intro">
+            <h2>Our perfumes will help you become more self-confident!</h2>
+            <span>A large selection of perfumes awaits you!</span>
+        </div>
+        <div class="text">
+            <span>Our VEDuhi Shop perfumes are unique compositions created with quality in mind. A wide range of 
+                scents from classics to modern trends will allow each client to choose the ideal option. High quality products 
+                and affordable prices make our store an attractive choice for connoisseurs of unique fragrances.</span>
+        </div>
+    </div>
+
+    <div id="overview">
+        <h2>Choice</h2>
+        <h4>The most basic types</h4>
+        <div class="img">
+            <img src="img/1.png" alt="">
+            <span>Perfume "Daniyal"</span>
+        </div>
+        <div class="img">
+            <img src="img/2.png" alt="">
+            <span>Perfume "Edil"</span>
+        </div>
+        <div class="img">
+            <img src="img/3.png" alt="">
+            <span>Perfume "Abdul"</span>
+        </div>
+        <div class="img">
+            <img src="img/4.png" alt="">
+            <span>Perfume"Vadim"</span>
+        </div>
+    </div>
+
+    <div id="contacts">
+        <center>
+            <h5>Feedback</h5>
+        </center>
+        <form id="form_input">
+            <label for="name">Name <span>*</span></label><br>
+            <input type="text" placeholder="Enter your name" name="name" id="name"><br>
+
+            <label for="email">Emall <span>*</span></label><br>
+            <input type="email" placeholder="Enter email" name="email" id="email"><br>
+
+            <label for="message"> Message <span>*</span></label><br>
+            <textarea type="message" placeholder="Enter your message " name="message" id="message"></textarea><br>
+            <div id="mess_send" class="btn">Send</div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        function slowScrll(id) {
+            $('html, body').animate({
+                scrollTop: $(id).offset().top
+
+            }, 500);
+        }
+
+        $(document).on("scroll", function () {
+            if ($(window).scrollTop() === 0)
+                $("header").removeClass("fixed");
+            else
+                $("header").attr("class", "fixed");
+
+        });
+    </script>
+
+
+</body>
+
+</html>
